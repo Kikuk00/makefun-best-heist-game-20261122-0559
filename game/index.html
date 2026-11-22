@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velvet Vault — The Midnight Heist</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0d0f14; }
+  #wrap { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+  /* Scale the 960x664 canvas up to fill the window while keeping its shape. */
+  #game { display: block; width: min(100vw, 144.58vh); height: auto; touch-action: none; }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" aria-label="Velvet Vault: a top-down heist game. Sneak past guards and cameras, grab the loot, reach the exit."></canvas>
+</div>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
